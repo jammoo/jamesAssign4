@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MyBio } from './MyBio';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'jamesAssign4';
+  MYBIO:MyBio = {sname: "James Bhagoutie", sid: "991554085", img: "../../assets/images/sunset.JPG", status: "Sophomore"};
 }

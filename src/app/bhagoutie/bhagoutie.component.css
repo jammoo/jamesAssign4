@@ -1,0 +1,22 @@
+/* James Bhagoutie 991554085 @import '@angular/material/prebuilt-themes/deeppurple-amber.css';*/
+@import '@angular/material/prebuilt-themes/purple-green.css';
+
+
+table {
+    margin: auto;
+    width: 50%;
+    border: 3px solid blue;
+    background-color: skyblue;
+    font-weight: bold;
+}
+
+td {
+    padding-left: 20%;
+}
+
+img {
+    width: 100px;
+}
+li {
+    padding-left: 2%;
+}

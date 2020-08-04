@@ -1,0 +1,73 @@
+<!-- James Bhagoutie, 991554085-->
+<mat-tab-group mat-stretch-tabs animationDuration="0ms">
+    <mat-tab label="My Courses">
+      <ng-template mat-tab-label>
+        <mat-icon color="primary">account_box</mat-icon> 
+        <br> 
+        Courses
+      </ng-template>
+      
+      <li *ngFor="let cls of myclasses; let i=index" id="s{{i}}"
+      (click)="onClickMe(i)">{{cls.CourseName}}
+      <div id='d{{i}}' [ngStyle]="{display : showHideText(i)}">
+        <strong>Class Name:</strong> {{cls.CourseName}}
+        <br> <strong>Credits:</strong> {{cls.Credits}}
+        <br> <strong>Description:</strong> {{cls.Description}}
+        <br> </div></li>
+        
+    </mat-tab>
+    
+    <mat-tab label="My Info"> 
+      <ng-template mat-tab-label>
+        <mat-icon color="warn">info</mat-icon> 
+        <br> 
+        My Info
+      </ng-template>
+      
+      <table>
+        <tr>
+          <td>
+            Name:
+          </td>
+          <td>
+            {{bio.sname}}
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            Student Id:
+          </td>
+          <td>
+            {{bio.sid}}
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            Status:
+          </td>
+          <td>
+            {{bio.status}}
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            Image:
+          </td>
+          <td>
+            <img src='{{bio.img}}' alt="image of sunset">
+          </td>
+        </tr>
+      </table>
+
+    </mat-tab>
+    
+    <mat-tab label="Display New or Used Cars"> 
+      <ng-template mat-tab-label>
+        <mat-icon color="accent">directions_car</mat-icon> Display New or Used Cars <mat-icon color="accent">electric_car</mat-icon>
+      </ng-template>
+      Content 3 
+    </mat-tab>
+  </mat-tab-group>

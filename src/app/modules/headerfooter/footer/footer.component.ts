@@ -1,3 +1,4 @@
+/* James Bhagoutie 991554085 */
 import { Component, OnInit } from '@angular/core';
 
 @Component({

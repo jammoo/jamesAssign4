@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+/* James Bhagoutie 991554085 */
+import { Component, OnInit, Input } from '@angular/core';
+import { MyBio } from 'src/app/MyBio';
 
 @Component({
   selector: 'app-header',
@@ -8,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
 export class HeaderComponent implements OnInit {
 
   constructor() { }
-
+  @Input() bio: MyBio;
   ngOnInit(): void {
   }
 
