@@ -3,8 +3,8 @@
     <mat-tab label="My Courses">
       <ng-template mat-tab-label>
         <mat-icon color="primary">account_box</mat-icon> 
-        <br> 
-        Courses
+        <br><br> 
+        <p> Courses </p>
       </ng-template>
       
       <li *ngFor="let cls of myclasses; let i=index" id="s{{i}}"
@@ -20,43 +20,43 @@
     <mat-tab label="My Info"> 
       <ng-template mat-tab-label>
         <mat-icon color="warn">info</mat-icon> 
-        <br> 
-        My Info
+        <br><br> 
+        <p> My Info </p>
       </ng-template>
       
-      <table>
+      <table class='tab2'>
         <tr>
-          <td>
+          <td class='tab2'>
             Name:
           </td>
-          <td>
+          <td class='tab2'>
             {{bio.sname}}
           </td>
         </tr>
 
         <tr>
-          <td>
+          <td class='tab2'>
             Student Id:
           </td>
-          <td>
+          <td class='tab2'>
             {{bio.sid}}
           </td>
         </tr>
 
         <tr>
-          <td>
+          <td class='tab2'>
             Status:
           </td>
-          <td>
+          <td class='tab2'>
             {{bio.status}}
           </td>
         </tr>
 
         <tr>
-          <td>
+          <td class='tab2'>
             Image:
           </td>
-          <td>
+          <td class='tab2'>
             <img src='{{bio.img}}' alt="image of sunset">
           </td>
         </tr>
@@ -66,8 +66,55 @@
     
     <mat-tab label="Display New or Used Cars"> 
       <ng-template mat-tab-label>
-        <mat-icon color="accent">directions_car</mat-icon> Display New or Used Cars <mat-icon color="accent">electric_car</mat-icon>
+        <mat-icon color="accent">directions_car</mat-icon> <p> Display New or Used Cars </p> <mat-icon color="accent">electric_car</mat-icon>
       </ng-template>
-      Content 3 
+      <button mat-raised-button class='tab3button' (click)="displayJSON(1)">
+        List of New Cars <mat-icon >new_releases</mat-icon>
+      </button>
+      <hr>
+      <button mat-raised-button class='tab3button' (click)="displayJSON(2)">
+        List of Used Cars <mat-icon >support</mat-icon>
+      </button>
+      <br>
+      <div  class='tab3' [ngStyle]="{display : showHideTable(1)}">
+        <br>
+      <h3 class='tab3'>List of New Cars</h3>
+      <table class="tab3">
+        <tr>  
+          <th>Make</th>  
+          <th>Type</th>   
+          <th>Engine</th> 
+          <th>Cost</th> 
+          <th>Colour</th>  
+        </tr>
+        <tr  *ngFor="let cls of new">
+          <td> {{cls.make}} </td>
+          <td> {{cls.type}} </td>
+          <td> {{cls.engine}} </td>
+          <td> {{cls.cost}} </td>
+          <td> {{cls.color}} </td>
+        </tr>
+      </table>
+    </div>
+      <div class='tab3' [ngStyle]="{display : showHideTable(2)}">
+        <br>
+      <h3 class='tab3'>List of Used Cars</h3>
+      <table class="tab3">
+        <tr>  
+          <th>Make</th>  
+          <th>Type</th>   
+          <th>Engine</th> 
+          <th>Cost</th> 
+          <th>Colour</th>  
+        </tr>
+        <tr  *ngFor="let cls of used">
+          <td> {{cls.make}} </td>
+          <td> {{cls.type}} </td>
+          <td> {{cls.engine}} </td>
+          <td> {{cls.cost}} </td>
+          <td> {{cls.color}} </td>
+        </tr>
+      </table>
+    </div>
     </mat-tab>
   </mat-tab-group>

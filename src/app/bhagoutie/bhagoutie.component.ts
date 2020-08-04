@@ -2,6 +2,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { MYCLASSES } from '../../assets/data/myCourses';
 import { MyBio } from '../MyBio';
+import { car } from '../carInterface';
 
 @Component({
   selector: 'app-bhagoutie',
@@ -10,9 +11,11 @@ import { MyBio } from '../MyBio';
 })
 export class BhagoutieComponent implements OnInit {
   i: number;
+  j: number;
   constructor() { }
   @Input() bio: MyBio;
-
+  @Input() new: car[];
+  @Input() used: car[];
   myclasses = MYCLASSES;
 
   ngOnInit(): void {
@@ -25,10 +28,21 @@ export class BhagoutieComponent implements OnInit {
   showHideText(index) {
     if (index == this.i) {
       return "block";
-    } 
+    }
     else {
       return "none";
     }
+  }
+
+  showHideTable(i) {
+    if (this.j == i) {
+      return "block";
+    }
+    return "none";
+  }
+
+  displayJSON(i) {
+    this.j = i;
   }
 
 }

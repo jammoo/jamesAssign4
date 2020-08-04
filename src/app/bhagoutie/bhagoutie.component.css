@@ -1,8 +1,17 @@
 /* James Bhagoutie 991554085 @import '@angular/material/prebuilt-themes/deeppurple-amber.css';*/
 @import '@angular/material/prebuilt-themes/purple-green.css';
 
+p {
+    color: black;
+}
 
-table {
+.tab3button {
+    margin-left: 45%;
+    background-color: white;
+    color: darkblue;
+}
+
+table.tab2, h3 {
     margin: auto;
     width: 50%;
     border: 3px solid blue;
@@ -10,7 +19,15 @@ table {
     font-weight: bold;
 }
 
-td {
+div.tab3 {
+    display: none;
+}
+
+h3.tab3 {
+    text-align: center;
+}
+
+td.tab2 {
     padding-left: 20%;
 }
 
